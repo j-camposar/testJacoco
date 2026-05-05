@@ -15,6 +15,7 @@ jobs:
        # Paso 1: Checkout del repositorio 
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -23,7 +24,7 @@ jobs:
       - name: Package application 
         run: mvn clean package -DkipTests
       - name: Upload JAR artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-jar
           path: target/*.jar
