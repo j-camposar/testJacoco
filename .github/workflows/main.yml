@@ -88,7 +88,7 @@ jobs:
       env: 
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       run: |
-      mvn verify sonar:sonar \
+        mvn verify sonar:sonar \
         -Dsonar.projectKey=j-camposar_testJacoco \
         -Dsonar.organization=j-camposar \
         -Dsonar.host.url=https://sonarcloud.io \
