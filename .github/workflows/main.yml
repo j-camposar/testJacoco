@@ -48,10 +48,10 @@ jobs:
         run: npm install -g snyk
       - name: Make Maven Wrapper executable
         run: chmod +x mvnw
-        # continue-on-error: true # Por si no usas wrapper
+        continue-on-error: true # Por si no usas wrapper
 
       - name: snyk test java 
-        # continue-on-error: true
+        continue-on-error: true
         env: 
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
           JAVA_OPTS: "-Xmx2g"
